@@ -82,8 +82,7 @@
                             </script>
                             Bản quyền thuộc về
                             <i class="fa fa-heart" aria-hidden="true"></i>
-                            <a class="text-dark font-weight-normal" href="nghia23d.com"
-                                target="_blank">Nghia23d.com</a>
+                            <a class="text-dark font-weight-normal" href="nghia23d.com" target="_blank">Nghia23d.com</a>
                         </p>
                     </div>
                 </div>
@@ -102,6 +101,9 @@
                             </a>
                             <a href="https://www.linkedin.com/in/nghia23d/">
                                 <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nghia23d/">
+                                <i class="fab fa-bitbucket"></i>
                             </a>
                             <a href="https://www.pinterest.com/nghia23d/">
                                 <i class="fab fa-pinterest"></i>
