@@ -30,7 +30,7 @@
                         <div class="footer-tittle">
                             <h4>Thông tin </h4>
                             <ul>
-                                <li><a href="#"> Về chúng tôi</a></li>
+                                <li><a href="#"> Về Nghia23d</a></li>
                                 <li><a href="#"> Chính sách</a></li>
                                 <li><a href="#"> Dự án đã làm</a></li>
                                 <li><a href="#"> Tin tức</a></li>
@@ -44,7 +44,7 @@
                             <h4>Dịch vụ
                             </h4>
                             <ul>
-                                <li><a href="#"> Thiết kế, lập trình website</a></li>
+                                <li><a href="#"> Thiết kế, lập trình web</a></li>
                                 <li><a href="#"> Lập trình Tool</a></li>
                                 <li><a href="#"> Lập trình CMS </a></li>
                                 <li><a href="#"> Lập trình CRM</a></li>
@@ -58,7 +58,7 @@
                             <h4> Liên hệ
                             </h4>
                             <p>
-                                Để lại Email để chúng tôi liên hệ lại với bạn
+                                Để lại Email để Nghia23d liên hệ lại với bạn
                             </p>
                             <form action="">
                                 <input type="email" name="EMAIL" placeholder="Email address" required=""
@@ -82,7 +82,7 @@
                             </script>
                             Bản quyền thuộc về
                             <i class="fa fa-heart" aria-hidden="true"></i>
-                            <a class="text-dark font-weight-normal" href="nghia23d.com" target="_blank">Nghia23d.com</a>
+                            <a class="text-dark font-weight-normal" href="nghia23d.com" target="_blank">Nghia23d</a>
                         </p>
                     </div>
                 </div>

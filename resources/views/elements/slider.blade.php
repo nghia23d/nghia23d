@@ -7,10 +7,10 @@
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                         <div class="hero__caption">
                             <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">
-                                Thiết Website By Nghia23d
+                                Thiết kế By Nghia23d
                             </h1>
                             <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">
-                                Sử dụng framwork Laravel mới nhất để xây dựng và lập trình ra website chuyên
+                                Nghia23d sử dụng framwork Laravel mới nhất để xây dựng và lập trình ra website chuyên
                                 nghiệp, ổn định và có tính bảo mật cao.
                             </p>
                             <!-- Hero-btn -->
@@ -36,10 +36,10 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                         <div class="hero__caption">
-                            <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">
+                            <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">
 
-                                Quy trình phát triển web chuyên nghiệp
-                            </h1>
+                                Quy trình phát triển web chuyên nghiệp tại Nghia23d
+                            </h2>
                             <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">
                                 Phân tích➟ Phát triển➟ Kiểm thử➟ Nghiệm thu ➟ Bàn giao.<br>
                                 <u>Và bảo hành tận tình xuyên suốt quá trình hoạt động của web.</u>

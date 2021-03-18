@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section-tittle mb-70">
-                        <h2>Công nghệ thiết kế Web hiện đại</h2>
+                        <h2>Nghia23d sử công nghệ thiết kế Web hiện đại</h2>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                         <p>
                             Đối với một công ty, một nhà hàng hay khách sạn,... một website để quảng bá
                             giống như một bộ mặt thứ hai, nơi mà khách hàng sẽ tìm đến để tìm hiểu trước tiên về các
-                            sản phẩm dich vụ của họ. Do đóyêu cầu cần có một website chuyên nghiệp, vừa thân thiện
+                            sản phẩm dich vụ của họ. Do đó yêu cầu cần có một website chuyên nghiệp, vừa thân thiện
                             dễ sử dụng, vừa nổi bật những sản phẩm dịch vụ của họ, nhằm thu hút được sự quan tâm chú
                             ý của hàng ngay từ cái nhìn đầu tiên.
                         </p>
@@ -95,7 +95,7 @@
                         <p>
                             Tối giản đang là xu hướng thiết kế chung của ngành website, là sự tối giản về các chi
                             tiết
-                            thiết và tăng những trải nghiệm mượt mà. Sự tối giản vừa phải trong thiết kế sẽ mang đến
+                            thiết và tăng những trải nghiệm mượt mà. Tại Nghia23d chúng tôi tăng sự tối giản vừa phải trong thiết kế sẽ mang đến
                             người dùng một cảm giác không gian gọn gàng và thông thoáng.
                         </p>
                         <a href="shop.html" class="btn">Tìm hiểu ngay</a>
