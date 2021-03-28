@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html class="no-js" lang="vi">
 
+@php
+    $theme = config('nghia23d.theme');
+@endphp
+
 <head>
     @include('layouts.head')
 </head>

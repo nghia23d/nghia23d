@@ -1,0 +1,16 @@
+{
+    "name": "nghia23d/cms",
+    "description": "cms for website",
+    "authors": [
+        {
+            "name": "nghia23d",
+            "email": "nghia23d@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "nghia23d\\cms\\": "src/"
+        }
+    }
+}

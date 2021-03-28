@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        nghia23d\cms\Providers\CmsServiceProvider::class,
         /*
          * Application Service Providers...
          */
