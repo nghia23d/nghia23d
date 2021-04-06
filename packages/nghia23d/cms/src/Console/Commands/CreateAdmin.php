@@ -3,6 +3,7 @@
 namespace nghia23d\cms\Console\Commands;
 
 use Illuminate\Console\Command;
+use nghia23d\cms\Http\Controllers\UserController;
 
 class CreateAdmin extends Command
 {
@@ -42,7 +43,7 @@ class CreateAdmin extends Command
             $email = $this->ask('Email: ');
             $password = $this->ask('Mat khau: ');
             if ($email && $password) {
-                // (new UserRepository)->createAdmin($email, $password);
+                (new UserController)->createAdmin($email, $password);
                 $this->info('Tao tai khoan thanh cong! Truy cap link websitecuaban/cms de su dung.');
                 $this->line('--------------------------------------------------------------------');
                 $this->info('Email: ' . $email);

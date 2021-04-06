@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class BaseController extends Controller
 {
+    protected $module;
     protected $pageName;
     protected $model;
     protected $itemPerPage = 10;
@@ -38,7 +39,9 @@ class BaseController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->model->create($request->all());
+        $this->model->create($request->all());
+
+        return redirect()->route('cms.' . $this->module . '.index');
     }
 
     /**

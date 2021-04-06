@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         nghia23d\cms\Providers\CmsServiceProvider::class,
+        // Intervention\Image\ImageServiceProvider::class,
         /*
          * Application Service Providers...
          */

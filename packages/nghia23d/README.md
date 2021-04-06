@@ -1,8 +1,7 @@
-# CMS manage Blog, Slider, User, ...
-
-
+# CMS for website
+# <- --------------- Feature ---------------- ->
 
 
 
 # <- --------------- Libary use ---------------- ->
-# npm install tinymce
+# 1: composer require unisharp/laravel-filemanager *Link: https://unisharp.github.io/laravel-filemanager/
