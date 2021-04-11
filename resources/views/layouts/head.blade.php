@@ -7,7 +7,7 @@
   gtag('config', 'G-86BBHG7Y7L');
 </script>
 
-<title>Nghia23d - Lập trình Website - CMS - CRM By Laravel</title>
+<title>Nghia23d - @yield('title') </title>
 
 <meta charset="utf-8"/>
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -27,7 +27,7 @@
 <meta property="article:publisher" content="https://www.facebook.com/nghia23d" />
 
 <!-- Favicon here -->
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="/themes/{{$theme}}/assets/img/favicon.ico" />
 <!-- CSS here -->
 <link rel="stylesheet" href="/themes/{{$theme}}/assets/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/themes/{{$theme}}/assets/css/owl.carousel.min.css" />

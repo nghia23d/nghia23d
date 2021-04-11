@@ -1,6 +1,6 @@
 <?php
 
-namespace nghia23d\cms\Http\Controllers;
+namespace nghia23d\cms\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -52,7 +52,7 @@ class BaseController extends Controller
      */
     public function show($id)
     {
-        return $this->model->findOrFail($id);
+        return view($this->pathViewModule . "report", ['data' =>  $this->model->findOrFail($id)]);
     }
 
     /**
@@ -64,10 +64,10 @@ class BaseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $this->findOrFail($id);
+        $data = $this->model->findOrFail($id);
         $data->update($request->all());
         //
-        return $result;
+        return redirect()->route('cms.' . $this->module . '.index');
     }
 
     /**
@@ -78,6 +78,8 @@ class BaseController extends Controller
      */
     public function destroy($id)
     {
-        return $this->model->destroy($id);
+        $this->model->destroy($id);
+
+        return redirect()->route('cms.' . $this->module . '.index');
     }
 }

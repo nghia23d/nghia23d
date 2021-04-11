@@ -12,14 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::view('/','home');
-//
 Route::get('/send-message','TelegramController@sendMessage');
-
-
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
-
 Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
+

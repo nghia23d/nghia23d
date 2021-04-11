@@ -1,6 +1,5 @@
 @extends('cms::layouts.layout')
 @section('content')
-    test
     <div class="content-wrapper">
         <div class="content-header">
             <div class="container-fluid">
@@ -32,7 +31,7 @@
                                         <div class="form-row mb-3">
                                             <div class="col-6">
                                                 <label for="name">Tag <sup class="text-danger">*</sup> </label>
-                                                <input class="form-control" type="text" name="tag">
+                                                <input data-role="tagsinput" class="form-control" type="text" name="tag">
                                             </div>
                                             <div class="col-6">
                                                 <label for="name">Meta descripttion <sup class="text-danger">*</sup></label>
@@ -42,7 +41,16 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="name">Thumbnail </label>
-                                            <input class="form-control" name="thumbnail" type="file" required>
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <a id="lfm" data-input="thumbnail" data-preview="holder"
+                                                        class="btn btn-primary text-white">
+                                                        <i class="fa fa-picture-o"></i> Choose
+                                                    </a>
+                                                </span>
+                                                <input id="thumbnail" class="form-control" type="text" name="thumbnail">
+                                            </div>
+                                            <img id="holder" style="margin-top:15px;max-height:100px;">
                                         </div>
                                         <div class="form-group">
                                             <label for="name">Trạng thái <sup class="text-danger">*</sup> </label>
@@ -68,7 +76,7 @@
                                             <td>Meta description</td>
                                             <td>Trạng thái</td>
                                             <td>Tác giả</td>
-                                            <td>Thao tác</td>
+                                            <td class="text-right">Thao tác</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -78,11 +86,28 @@
                                         @foreach ($data as $index => $value)
                                             <tr>
                                                 <td> {{ $index + 1 }} </td>
-                                                <td> {{ $value->title }} </td>
-                                                <td> {{ $value->thumbnail }} </td>
+                                                <td> <a target="_blank" href="/{{$value->slug_title}}.html"> <b> {{ $value->title }} </b> </a></td>
+                                                <td> <img width="150" src="{{ $value->thumbnail }}" alt=""> </td>
                                                 <td> {{ $value->meta_description }} </td>
-                                                <td> {{ $value->status }} </td>
-                                                <td></td>
+                                                <td class="text-center">
+                                                    @if ($value->status)
+                                                        <span class="badge badge-success">Kích hoạt</span>
+                                                    @else
+                                                        <span class="badge badge-warning">Chưa kích hoạt</span>
+                                                    @endif
+                                                </td>
+                                                <td> {{ $value->user->name ?? 'Admin' }} </td>
+                                                <td class="text-right">
+                                                    <!-- Destroy  -->
+                                                    @component('cms::components.modals.destroy')
+                                                        @slot('id') {{ $value->id }} @endslot
+                                                    @endcomponent
+
+                                                    <a class="btn btn-primary btn-sm"
+                                                        href="blog/{{ $value->id }}">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -94,109 +119,7 @@
             </div>
         </section>
     </div>
-    {{-- <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelEdit" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabelEdit">Chỉnh sửa {{$prefix}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form id="form-edit" method="POST" action="{{route($prefix.'.update',0)}}" accept-charset="UTF-8" enctype="multipart/form-data" class="form-horizontal form-label-left">
-            @csrf
-            @method('PUT')
-            <div class="form-group">
-                <label for="status" class="control-label">Status</label>
-                <select class="form-control" id="status" name="status">
-                    <option value="1" >Kích hoạt</option>
-                    <option value="0">Chưa kích hoạt</option>
-                </select>
-            </div>
-            <div class="form-group">
-              <label for="status" class="control-label">Trạng thái liên hệ</label>
-              <select class="form-control" id="status-contact" name="status_contact">
-                  <option value="1" >Đã liên hệ</option>
-                  <option value="0">Chưa liên hệ</option>
-              </select>
-          </div>
-            <div class="ln_solid"></div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Save</button>
-            </div>
-            <img class="d-none img-fluid" src="" alt="">
-        </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div> --}}
-    {{-- @section('js')
-      <script>
-
-        $('.btn-edit').click(function() {
-            $("#modal-edit").modal({backdrop: 'static', keyboard: false});
-
-            let id              = $(this).data('id');
-            let rowParent       = $('tr#row-'+id);
-            let status          = rowParent.find(".btn-status-ajax");
-            let statusContact   = rowParent.find(".status-contact");
-
-            let formEdit = $('#form-edit');
-
-            formEdit.attr('action', formEdit.attr('action').slice(0, -1) + id);
-
-            $("#status").val(status.attr('data-value'));
-            $("#status-contact").val(statusContact.attr('data-value'));
-        });
-
-      </script>
-  @endsection --}}
 @section('js')
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
-    <script>
-  var editor_config = {
-    path_absolute : "/",
-    selector: '#tinymce',
-    relative_urls: false,
-    plugins: [
-      "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-      "searchreplace wordcount visualblocks visualchars code fullscreen",
-      "insertdatetime media nonbreaking save table directionality",
-      "emoticons template paste textpattern"
-    ],
-    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media",
-    file_picker_callback : function(callback, value, meta) {
-      var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
-      var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
-
-      var cmsURL = editor_config.path_absolute + 'laravel-filemanager?editor=' + meta.fieldname;
-      if (meta.filetype == 'image') {
-        cmsURL = cmsURL + "&type=Images";
-      } else {
-        cmsURL = cmsURL + "&type=Files";
-      }
-      
-      tinyMCE.activeEditor.windowManager.openUrl({
-        url : cmsURL,
-        title : 'Filemanager',
-        width : x * 0.8,
-        height : y * 0.8,
-        resizable : "yes",
-        close_previous : "no",
-        onMessage: (api, message) => {
-          callback(message.content);
-        }
-      });
-    }
-  };
-
-  tinymce.init(editor_config);
-</script>
-
+    @component('cms::components.script_lfm')@endcomponent
 @endsection
 @endsection

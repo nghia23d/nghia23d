@@ -1,6 +1,6 @@
 <?php
 
-namespace nghia23d\cms\Http\Controllers;
+namespace nghia23d\cms\Http\Controllers\Admin;
 
 use nghia23d\cms\Models\User as MainModel;
 

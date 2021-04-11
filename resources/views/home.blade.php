@@ -1,4 +1,7 @@
 @extends('layouts.layout')
+@section('title')
+    Lập trình Website - CMS - CRM By Laravel
+@endsection
 @section('content')
     @include('elements.slider')
 
@@ -95,7 +98,8 @@
                         <p>
                             Tối giản đang là xu hướng thiết kế chung của ngành website, là sự tối giản về các chi
                             tiết
-                            thiết và tăng những trải nghiệm mượt mà. Tại Nghia23d chúng tôi tăng sự tối giản vừa phải trong thiết kế sẽ mang đến
+                            thiết và tăng những trải nghiệm mượt mà. Tại Nghia23d chúng tôi tăng sự tối giản vừa phải trong
+                            thiết kế sẽ mang đến
                             người dùng một cảm giác không gian gọn gàng và thông thoáng.
                         </p>
                         <a href="shop.html" class="btn">Tìm hiểu ngay</a>

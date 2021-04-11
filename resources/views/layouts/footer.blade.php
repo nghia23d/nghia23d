@@ -8,7 +8,7 @@
                         <div class="single-footer-caption mb-30">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <a href="#"><img src="assets/img/logo/nghia23d.png" alt="" /></a>
+                                <a href="/"><img src="/themes/{{$theme}}/assets/img/logo/nghia23d.png" alt="" /></a>
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
