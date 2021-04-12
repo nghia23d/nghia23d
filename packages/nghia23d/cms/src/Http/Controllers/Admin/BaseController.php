@@ -37,11 +37,9 @@ class BaseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeResource($data)
     {
-        $this->model->create($request->all());
-
-        return redirect()->route('cms.' . $this->module . '.index');
+       return $this->model->create($data);
     }
 
     /**

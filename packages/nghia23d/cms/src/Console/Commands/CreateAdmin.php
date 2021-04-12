@@ -3,7 +3,7 @@
 namespace nghia23d\cms\Console\Commands;
 
 use Illuminate\Console\Command;
-use nghia23d\cms\Http\Controllers\UserController;
+use nghia23d\cms\Http\Controllers\Admin\UserController;
 
 class CreateAdmin extends Command
 {

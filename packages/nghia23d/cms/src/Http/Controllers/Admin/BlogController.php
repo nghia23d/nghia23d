@@ -3,6 +3,7 @@
 namespace nghia23d\cms\Http\Controllers\Admin;
 
 use nghia23d\cms\Models\Blog as MainModel;
+use nghia23d\cms\Http\Requests\Admin\BlogRequest as MainRequest;
 //
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -20,13 +21,17 @@ class BlogController extends BaseController
         parent::__construct();
     }
 
-    public function store(Request $request)
-    {   
-        //merege user id
-        $data = array_merge($request->all(), ['user_id' => Auth::id(), 'slug_title' => Str::slug($request->title, '-')]);
+    public function store(MainRequest $request)
+    {
+        //merege user id and title
+        $data = array_merge($request->all(), [
+            'user_id'    => Auth::id(),
+            'slug_title' => Str::slug($request->title, '-')
+        ]);
 
-        $this->model->create($data);
         //
+        $this->storeResource($data);
+
         return redirect()->route('cms.' . $this->module . '.index');
     }
 }

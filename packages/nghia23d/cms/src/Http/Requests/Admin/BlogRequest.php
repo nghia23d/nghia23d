@@ -1,0 +1,54 @@
+<?php
+
+namespace nghia23d\cms\Http\Requests\Admin;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class BlogRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    private $table = 'blog';
+
+    public function authorize()
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        $id = $this->id;
+
+        $condThumb  = 'bail|required|max:1024';
+        $condTitle  = "bail|required|between:3,50|unique:$this->table,title";
+
+        //rules for edit
+        if (!empty($id)) {
+            $condThumb   = 'bail|max:1024';
+            $condTitle  .= ",$id";
+        }
+        return [
+            'title'       => $condTitle,
+            'content'     => 'bail|required|min:5',
+            'status'      => 'bail|in:0,1',
+            'thumbnail'   => $condThumb,
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'title.required'    => 'Tiêu đề không được để trống',
+            'title.between'     => 'Tiêu đề không được ít hơn :min  kí tực và nhỏ hơn :max',
+            'content.required' => 'Content không được để trống',
+            'status.in'        => 'Vui lòng chọn kích hoạt hoặc không kích hoạt',
+        ];
+    }
+}
