@@ -49,4 +49,4 @@
 <link rel="stylesheet" href="/themes/{{ $theme }}/assets/css/style.css" />
 
 <!-- Custom CSS -->
-<link rel="stylesheet" href="customs/styles.css" />
+<link rel="stylesheet" href="/themes/{{ $theme }}/customs/styles.css" />

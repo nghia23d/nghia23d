@@ -28,27 +28,35 @@ class BlogRequest extends FormRequest
         $id = $this->id;
 
         $condThumb  = 'bail|required|max:1024';
-        $condTitle  = "bail|required|between:3,50|unique:$this->table,title";
+        $condTitle  = "bail|required|between:5,50|unique:$this->table,title";
 
         //rules for edit
         if (!empty($id)) {
             $condThumb   = 'bail|max:1024';
             $condTitle  .= ",$id";
         }
+        
         return [
-            'title'       => $condTitle,
-            'content'     => 'bail|required|min:5',
-            'status'      => 'bail|in:0,1',
-            'thumbnail'   => $condThumb,
+            'title'            => $condTitle,
+            'tag'              => 'bail|required',
+            'meta_description' => 'bail|required',
+            'content'          => 'bail|required|min:5',
+            'status'           => 'bail|in:0,1',
+            'thumbnail'        => $condThumb,
         ];
     }
     public function messages()
     {
         return [
-            'title.required'    => 'Tiêu đề không được để trống',
-            'title.between'     => 'Tiêu đề không được ít hơn :min  kí tực và nhỏ hơn :max',
-            'content.required' => 'Content không được để trống',
-            'status.in'        => 'Vui lòng chọn kích hoạt hoặc không kích hoạt',
+            'title.required'            => 'Tiêu đề không được để trống',
+            'title.unique'              => 'Tiêu đề bài viết này đã tồn tại. Hãy đặt tiêu đề khác',
+            'title.between'             => 'Tiêu đề không được ít hơn :min  kí tực và nhỏ hơn :max',
+            'tag.required'              => 'Tag (chủ đề) của bài viết không được để trống',
+            'meta_description.required' => 'Meta Description không được để trống',
+            'content.required'          => 'Nội dung bài viết không được để trống',
+            'content.min'               => 'Nội dung bài viết phải ít nhất 5 kí tự',
+            'status.in'                 => 'Vui lòng chọn kích hoạt hoặc không kích hoạt',
+            'thumbnail.required'        => 'Thumbnail không được để trống',
         ];
     }
 }

@@ -63,7 +63,7 @@ class BaseController extends Controller
     public function update(Request $request, $id)
     {
         $data = $this->model->findOrFail($id);
-        $data->update($request->all());
+        $data->update(array_filter($request->all()));
         //
         return redirect()->route('cms.' . $this->module . '.index');
     }

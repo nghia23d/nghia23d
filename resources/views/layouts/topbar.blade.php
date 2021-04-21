@@ -5,7 +5,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="/"><img src="/themes/{{$theme}}/assets/img/logo/nghia23d.png" alt="" /></a>
+                        <a href="/"><img src="/themes/{{ $theme }}/assets/img/logo/nghia23d.png" alt="" /></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
@@ -20,7 +20,7 @@
                                         <li><a href="#">CRM</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="/blog.html">Blog</a></li>
                                 <li><a href="/ve-toi.html">Về tôi</a></li>
                             </ul>
                         </nav>

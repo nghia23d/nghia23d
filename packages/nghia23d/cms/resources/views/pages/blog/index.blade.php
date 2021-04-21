@@ -7,9 +7,9 @@
                 <div class="row mb-2">
                     <div class="col-12 mb-3">
                         @foreach ($errors->all() as $error)
-                        <div class="alert alert-danger"> {{ $error }}</div>
+                            <div class="alert alert-danger"> {{ $error }}</div>
                         @endforeach
-                    </div> 
+                    </div>
                     <div class="col-sm-6">
                         <h1 class="m-0 text-dark">Danh sách <span class="text-lowercase">{{ $pageName }}</span> </h1>
                     </div>
@@ -31,17 +31,18 @@
                                         @slot('modalClass') modal-lg @endslot
                                         <div class="form-group">
                                             <label for="name">Tiêu đề <sup class="text-danger">*</sup> </label>
-                                            <input class="form-control" type="text" name="title" required>
+                                            <input value="{{ old('title') }}" class="form-control" type="text" name="title"
+                                                required>
                                         </div>
 
                                         <div class="form-row mb-3">
                                             <div class="col-6">
                                                 <label for="name">Tag <sup class="text-danger">*</sup> </label>
-                                                <input data-role="tagsinput" class="form-control" type="text" name="tag">
+                                                <input value="{{ old('tag') }}" data-role="tagsinput" class="form-control" type="text" name="tag">
                                             </div>
                                             <div class="col-6">
                                                 <label for="name">Meta descripttion <sup class="text-danger">*</sup></label>
-                                                <input class="form-control" type="text" name="meta_description">
+                                                <input value="{{ old('meta_description') }}" class="form-control" type="text" name="meta_description">
                                             </div>
 
                                         </div>
@@ -92,7 +93,8 @@
                                         @foreach ($data as $index => $value)
                                             <tr>
                                                 <td> {{ $index + 1 }} </td>
-                                                <td> <a target="_blank" href="/{{$value->slug_title}}.html"> <b> {{ $value->title }} </b> </a></td>
+                                                <td> <a target="_blank" href="/{{ $value->slug_title }}.html"> <b>
+                                                            {{ $value->title }} </b> </a></td>
                                                 <td> <img width="150" src="{{ $value->thumbnail }}" alt=""> </td>
                                                 <td> {{ $value->meta_description }} </td>
                                                 <td class="text-center">
@@ -109,8 +111,7 @@
                                                         @slot('id') {{ $value->id }} @endslot
                                                     @endcomponent
 
-                                                    <a class="btn btn-primary btn-sm"
-                                                        href="blog/{{ $value->id }}">
+                                                    <a class="btn btn-primary btn-sm" href="blog/{{ $value->id }}">
                                                         <i class="fa fa-eye" aria-hidden="true"></i>
                                                     </a>
                                                 </td>

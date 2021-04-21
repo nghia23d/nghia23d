@@ -12,10 +12,17 @@ class BlogController
         $this->model = $model;
     }
 
-    public function getArticle($slug_title)
+    public function index()
+    {
+      $data =  $this->model->latest()->get();
+       
+      return view('blog', ['data' => $data]);
+    }
+
+    public function show($slug_title)
     {
       $data =  $this->model->where('slug_title', $slug_title)->active()->firstOrFail();
        
-      return view('blog', ['data' => $data]);
+      return view('blog_detail', ['data' => $data]);
     }
 }

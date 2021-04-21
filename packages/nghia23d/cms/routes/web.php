@@ -26,7 +26,9 @@ Route::group(
             \UniSharp\LaravelFilemanager\Lfm::routes();
         });
 
-        Route::get('/{slug_title}.html', 'BlogController@getArticle')
+        Route::get('/blog.html', 'BlogController@index');
+
+        Route::get('/{slug_title}.html', 'BlogController@show')
         ->where('slug_title', '[0-9a-zA-Z_-]+')
         ->where('id', '[0-9]+');
     }

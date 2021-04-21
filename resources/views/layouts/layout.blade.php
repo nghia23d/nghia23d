@@ -2,7 +2,7 @@
 <html class="no-js" lang="vi">
 
 @php
-    $theme = config('nghia23d.theme');
+$theme = config('nghia23d.theme');
 @endphp
 
 <head>
