@@ -1,7 +1,9 @@
 @extends('layouts.layout')
-@section('title')
-    {{ $data->title }}
-@endsection
+
+@section('title', $data->title)
+@section('keywords', $data->tag)
+@section('description', $data->meta_descrtion)
+
 @section('content')
     <div class="container">
         <div class="row">
@@ -36,7 +38,7 @@
 
             </div>
             <div class="col-lg-4">
-                @include('elements.tags', ['tags' => $data->tag])
+                @include('elements.tags', ['tags' => $data->tag_array])
             </div>
         </div>
     </div>

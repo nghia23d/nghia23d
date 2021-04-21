@@ -1,6 +1,6 @@
 <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Trang quản lý Nghia23d</title>
+  <title>Trang quản lý {{ config('app.name') }} </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->

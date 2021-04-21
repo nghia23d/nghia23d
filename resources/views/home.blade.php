@@ -1,7 +1,4 @@
 @extends('layouts.layout')
-@section('title')
-    Lập trình Website - CMS - CRM By Laravel
-@endsection
 @section('content')
     @include('elements.slider')
 
