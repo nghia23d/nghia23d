@@ -35,4 +35,9 @@ class Blog extends BaseModel
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getTagArrayAttribute()
+    {
+        return explode(',', $this->tag);
+    }
 }
