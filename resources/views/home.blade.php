@@ -21,7 +21,7 @@
                         </div>
                         <div class="product-caption">
                             <h3>
-                                <a href="/">Bootstrap v5.0/4.x</a>
+                                <a href="#">Bootstrap v5.0/4.x</a>
                             </h3>
                             <span>Latest</span>
                         </div>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="product-caption">
                             <h3>
-                                <a href="/">Html5 - Css3 - Javscript</a>
+                                <a href="#">Html5 - Css3 - Javscript</a>
                             </h3>
                             <span>Latest</span>
                         </div>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="product-caption">
                             <h3>
-                                <a href="/">Framework Laravel</a>
+                                <a href="#">Framework Laravel</a>
                             </h3>
                             <span>Latest</span>
                         </div>
@@ -72,7 +72,7 @@
                             dễ sử dụng, vừa nổi bật những sản phẩm dịch vụ của họ, nhằm thu hút được sự quan tâm chú
                             ý của hàng ngay từ cái nhìn đầu tiên.
                         </p>
-                        <a href="/" class="btn">Tìm hiểu ngay</a>
+                        <a href="#" class="btn">Tìm hiểu ngay</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-10">
@@ -99,7 +99,7 @@
                             thiết kế sẽ mang đến
                             người dùng một cảm giác không gian gọn gàng và thông thoáng.
                         </p>
-                        <a href="/" class="btn">Tìm hiểu ngay</a>
+                        <a href="#" class="btn">Tìm hiểu ngay</a>
                     </div>
                 </div>
             </div>
