@@ -16,7 +16,7 @@
                             <!-- Hero-btn -->
                             <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s"
                                 data-duration="2000ms">
-                                <a href="industries.html" class="btn">Gửi yêu cầu ngay</a>
+                                <a href="/" class="btn">Gửi yêu cầu ngay</a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                             <!-- Hero-btn -->
                             <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s"
                                 data-duration="2000ms">
-                                <a href="industries.html" class="btn">Gửi yêu cầu ngay</a>
+                                <a href="/" class="btn">Gửi yêu cầu ngay</a>
                             </div>
                         </div>
                     </div>
