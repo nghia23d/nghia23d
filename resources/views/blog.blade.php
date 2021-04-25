@@ -34,11 +34,11 @@
                                 <a class="d-inline-block" href="{{ $blog->slug_title }}.html">
                                     <h2>{{ $blog->title }}</h2>
                                 </a>
-                                <div class="content mb-3 text-ellipsis">
-                                    {!! $blog->content !!}
+                                <div class="content mb-3 summary-content">
+                                    {!! mb_substr($blog->content, 0, 250, 'utf-8') . '...' !!}
                                 </div>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> {{ $blog->user->name }}</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i> {{--  {{ $blog->user->name }}  --}} Nghia23d</a></li>
                                     {{-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> --}}
                                 </ul>
                             </div>
