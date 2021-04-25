@@ -5,7 +5,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="/"><img src="/themes/{{ $theme }}/assets/img/logo/nghia23d.png" alt="" /></a>
+                        <a href="{{ config('app.url') }}"><img src="/themes/{{ $theme }}/assets/img/logo/nghia23d.png" alt="" /></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">

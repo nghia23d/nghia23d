@@ -15,7 +15,7 @@
                     <input name="q" placeholder="Tìm kiếm" required="" class="single-input">
                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms"
                         style="animation-delay: 0.8s;">
-                        <a href="industries.html" class="btn">Tìm kiếm</a>
+                        <a href="#" class="btn">Tìm kiếm</a>
                     </div>
                 </form>
 
