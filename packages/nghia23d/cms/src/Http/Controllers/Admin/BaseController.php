@@ -12,8 +12,8 @@ class BaseController extends Controller
     protected $model;
     protected $itemPerPage = 10;
     protected $pathViewModule = '';
-    
-  
+
+
     public function __construct()
     {
         view()->share('pageName', $this->pageName);
@@ -26,7 +26,7 @@ class BaseController extends Controller
      */
     public function index()
     {
-        $data = $this->model->all();
+        $data = $this->model->latest()->get();
 
         return view($this->pathViewModule . 'index', compact('data'));
     }
@@ -39,7 +39,7 @@ class BaseController extends Controller
      */
     public function storeResource($data)
     {
-       return $this->model->create($data);
+        return $this->model->create($data);
     }
 
     /**
@@ -63,7 +63,7 @@ class BaseController extends Controller
     public function update(Request $request, $id)
     {
         $data = $this->model->findOrFail($id);
-        $data->update(array_filter($request->all()));
+        $data->update(array_filter($request->all(), 'strlen'));
         //
         return redirect()->route('cms.' . $this->module . '.index');
     }

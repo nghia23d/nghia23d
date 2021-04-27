@@ -11,7 +11,7 @@
                     <div class="main-menu d-none d-lg-block">
                         <nav>
                             <ul id="navigation">
-                                <li><a href="#">Trang chủ</a></li>
+                                <li><a href="{{ config('app.url') }}">Trang chủ</a></li>
                                 <li class="hot">
                                     <a href="#">Dự án đã làm</a>
                                     <ul class="submenu">

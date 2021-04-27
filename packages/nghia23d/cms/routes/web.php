@@ -10,7 +10,8 @@ Route::group(
     function () {
         // Module
         Route::resources([
-            'blog' => BlogController::class,
+            'blog'         => BlogController::class,
+            'question_ask' => QuestionAskController::class,
         ]);
     }
 );
@@ -29,7 +30,7 @@ Route::group(
         Route::get('/blog.html', 'BlogController@index');
 
         Route::get('/{slug_title}.html', 'BlogController@show')
-        ->where('slug_title', '[0-9a-zA-Z_-]+')
-        ->where('id', '[0-9]+');
+            ->where('slug_title', '[0-9a-zA-Z_-]+')
+            ->where('id', '[0-9]+');
     }
 );

@@ -21,8 +21,8 @@ class BlogController
 
     public function show($slug_title)
     {
-      $data =  $this->model->where('slug_title', $slug_title)->active()->firstOrFail();
-       
+      $data =  $this->model->getBlogWithSlugTitle($slug_title);
+     
       return view('blog_detail', ['data' => $data]);
     }
 }

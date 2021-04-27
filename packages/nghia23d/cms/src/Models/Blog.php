@@ -6,9 +6,6 @@ class Blog extends BaseModel
 {
     protected $table = 'blog';
 
-    const STATUS_INACTIVE = 0;
-    const STATUS_ACTIVE = 1;
-
     protected $fillable = [
         'id',
         'title',
@@ -21,16 +18,6 @@ class Blog extends BaseModel
         'user_id'
     ];
 
-    public function scopeActive($query)
-    {
-        return $query->where('status', self::STATUS_ACTIVE);
-    }
-
-    public function scopeInActive($query)
-    {
-        return $query->where('status', self::STATUS_INACTIVE);
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -39,5 +26,12 @@ class Blog extends BaseModel
     public function getTagArrayAttribute()
     {
         return explode(',', $this->tag);
+    }
+
+    public function getBlogWithSlugTitle($slug_title)
+    {
+        return  $this->where('slug_title', $slug_title)
+            ->active()
+            ->firstOrFail();
     }
 }

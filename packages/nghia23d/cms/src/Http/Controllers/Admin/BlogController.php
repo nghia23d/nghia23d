@@ -16,7 +16,7 @@ class BlogController extends BaseController
         $this->module = 'blog';
         $this->pageName = 'Bài viết';
         $this->model = $model;
-        $this->pathViewModule = 'cms::pages.blog.';
+        $this->pathViewModule = "cms::pages.$this->module.";
         //
         parent::__construct();
     }
