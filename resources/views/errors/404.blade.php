@@ -41,6 +41,9 @@
                         <a href="https://www.pinterest.com/nghia23d/">
                             <i class="fab fa-pinterest"></i>
                         </a>
+                        <a href="https://t.me/nghia23d">
+                            <i class="fab fa-telegram"></i>
+                        </a>
                         <a href="http://nghia23d.com/">
                             <i class="fas fa-globe"></i>
                         </a>
