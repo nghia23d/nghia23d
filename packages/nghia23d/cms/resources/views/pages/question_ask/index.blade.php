@@ -36,8 +36,8 @@
 
                                 <div class="form-group">
                                     <label for="name">Trả lời <sup class="text-danger">*</sup> </label>
-                                    <input value="{{ old('ask') }}" class="form-control" type="text" name="ask"
-                                        required>
+                                    <textarea class="form-control" required name="ask"
+                                        rows="5">{{ old('ask') }}</textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -85,6 +85,32 @@
                                             @slot('id') {{ $value->id }} @endslot
                                             @endcomponent
 
+                                            <!-- Edit  -->
+                                            @component('cms::components.modals.update')
+                                            @slot('id') {{$value->id}} @endslot
+
+                                            <div class="form-group">
+                                                <label for="name">Câu hỏi <sup class="text-danger">*</sup> </label>
+                                                <input value="{{ $value->question }}" class="form-control" type="text"
+                                                    name="question" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="name">Trả lời <sup class="text-danger">*</sup> </label>
+                                                <textarea class="form-control" required name="ask"
+                                                    rows="5">{{ $value->ask }}</textarea>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Trạng thái</label>
+                                                <select class="form-control" name="status" required>
+                                                    <option value="1" @if($value->status) selected @endif>Kích hoạt
+                                                    </option>
+                                                    <option value="0" @if(!$value->status) selected @endif>Chưa kích
+                                                        hoạt</option>
+                                                </select>
+                                            </div>
+                                            @endcomponent
                                         </td>
                                     </tr>
                                     @endforeach
