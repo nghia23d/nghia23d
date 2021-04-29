@@ -4,7 +4,7 @@
         <!-- Section tittle -->
         <div class="row">
             <div class="col-12">
-                <div class="section-tittle mb-70">
+                <div class="section-tittle mb-30">
                     <h2>Câu hỏi thường gặp</h2>
                 </div>
             </div>
