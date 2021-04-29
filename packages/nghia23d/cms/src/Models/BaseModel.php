@@ -18,5 +18,9 @@ class BaseModel extends Model
     {
         return $query->where('status', self::STATUS_INACTIVE);
     }
+
+    public function getDataActive(){
+        return $this->active()->latest()->get();
+    }
    
 }

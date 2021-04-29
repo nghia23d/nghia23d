@@ -109,6 +109,6 @@
 </div>
 
 <!-- Question ask -->
-@include('elements.question_ask')
+@include('elements.question_ask', ['data' => $data->questionAsk])
 
 @endsection

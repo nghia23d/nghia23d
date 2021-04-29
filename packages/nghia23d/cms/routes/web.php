@@ -22,15 +22,19 @@ Route::group(
         'namespace' => 'nghia23d\cms\Http\Controllers\User',
     ],
     function () {
+
+        Route::get('/', 'HomeController@pageHome')->name('home');
+
+        Route::get('/blog.html', 'HomeController@pageBlog');
+
+        Route::get('/{slug_title}.html', 'HomeController@getDetailBlog')
+            ->where('slug_title', '[0-9a-zA-Z_-]+')
+            ->where('id', '[0-9]+');
+
+
         // File Manager
         Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
             \UniSharp\LaravelFilemanager\Lfm::routes();
         });
-
-        Route::get('/blog.html', 'BlogController@index');
-
-        Route::get('/{slug_title}.html', 'BlogController@show')
-            ->where('slug_title', '[0-9a-zA-Z_-]+')
-            ->where('id', '[0-9]+');
     }
 );

@@ -30,7 +30,7 @@ class Blog extends BaseModel
 
     public function getBlogWithSlugTitle($slug_title)
     {
-        return  $this->where('slug_title', $slug_title)
+        return $this->where('slug_title', $slug_title)
             ->active()
             ->firstOrFail();
     }
