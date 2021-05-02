@@ -12,16 +12,16 @@ $version = '1.12';
 
 <body class="overflow-x-hidden">
 
-    <!-- ------Page------ -->
+    <!-- Topbar -->
     @include('layouts.topbar')
 
+    <!-- Content -->
     <main>
         @yield('content')
     </main>
 
+    <!-- Footer -->
     @include('layouts.footer')
-    <!-- -----Endpage----- -->
-
 
     <!-- Elements -->
     @include('elements.preload')
