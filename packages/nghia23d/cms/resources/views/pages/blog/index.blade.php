@@ -38,11 +38,13 @@
                                         <div class="form-row mb-3">
                                             <div class="col-6">
                                                 <label for="name">Tag <sup class="text-danger">*</sup> </label>
-                                                <input value="{{ old('tag') }}" data-role="tagsinput" class="form-control" type="text" name="tag">
+                                                <input value="{{ old('tag') }}" data-role="tagsinput" class="form-control"
+                                                    type="text" name="tag">
                                             </div>
                                             <div class="col-6">
                                                 <label for="name">Meta descripttion <sup class="text-danger">*</sup></label>
-                                                <input value="{{ old('meta_description') }}" class="form-control" type="text" name="meta_description">
+                                                <input value="{{ old('meta_description') }}" class="form-control" type="text"
+                                                    name="meta_description">
                                             </div>
 
                                         </div>
@@ -64,6 +66,17 @@
                                             <select name="status" class="form-control">
                                                 <option value="1">Kích hoạt</option>
                                                 <option value="0">Chưa kích hoạt</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">Bài viết nổi bật <sup class="text-danger">*</sup>
+                                                <i class="fa fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Bài viết nổi bật là bài viết sẽ xuất hiện ngoài trang chủ"
+                                                    aria-hidden="true"></i>
+                                            </label>
+                                            <select name="is_highlight" class="form-control">
+                                                <option value="0">Bài viết bình thường</option>
+                                                <option value="1">Bài viết nổi bật</option>
                                             </select>
                                         </div>
                                         <div class="form-group">

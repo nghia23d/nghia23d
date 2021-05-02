@@ -20,10 +20,10 @@
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-                    @foreach ($data as $blog)
+                    @foreach ($data as $value)
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="{{ $blog->thumbnail }}" alt="{{ $blog->title }}">
+                                <img class="card-img rounded-0" src="{{ $value->thumbnail }}" alt="{{ $value->title }}">
                                 {{-- <a href="#" class="blog_item_date">
                                 <h3>15</h3>
                                 <p>Jan</p>
@@ -31,14 +31,14 @@
                             </div>
 
                             <div class="blog_details">
-                                <a class="d-inline-block" href="{{ $blog->slug_title }}.html">
-                                    <h2>{{ $blog->title }}</h2>
+                                <a class="d-inline-block" href="{{ $value->slug_title }}.html">
+                                    <h2>{{ $value->title }}</h2>
                                 </a>
                                 <div class="content mb-3 summary-content">
-                                    {!! mb_substr($blog->content, 0, 250, 'utf-8') . '...' !!}
+                                    {!! $value->short_content !!}
                                 </div>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> {{--  {{ $blog->user->name }}  --}} Nghia23d</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i> {{--  {{ $value->user->name }}  --}} Nghia23d</a></li>
                                     {{-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> --}}
                                 </ul>
                             </div>

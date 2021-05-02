@@ -1,5 +1,5 @@
 @if(count($data))
-<section class="section-padding30 slider-height2  d-flex">
+<section class="section-padding2 bg-light d-flex">
     <div class="container m-auto">
         <!-- Section tittle -->
         <div class="row">

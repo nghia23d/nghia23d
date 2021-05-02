@@ -42,6 +42,7 @@ class BlogRequest extends FormRequest
             'meta_description' => 'bail|required',
             'content'          => 'bail|required|min:5',
             'status'           => 'bail|in:0,1',
+            'is_highlight'     => 'bail|in:0,1',
             'thumbnail'        => $condThumb,
         ];
     }
@@ -56,6 +57,7 @@ class BlogRequest extends FormRequest
             'content.required'          => 'Nội dung bài viết không được để trống',
             'content.min'               => 'Nội dung bài viết phải ít nhất 5 kí tự',
             'status.in'                 => 'Vui lòng chọn kích hoạt hoặc không kích hoạt',
+            'is_highlight.in'           => 'Vui lòng chọn bài viết nổi bật hoặc không nổi bật',
             'thumbnail.required'        => 'Thumbnail không được để trống',
         ];
     }

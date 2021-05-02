@@ -30,10 +30,10 @@
                         <div class="footer-tittle">
                             <h4>Thông tin </h4>
                             <ul>
-                                <li><a href="#"> Về Nghia23d</a></li>
+                                <li><a href="/ve-toi.html"> Về Nghia23d</a></li>
                                 <li><a href="#"> Chính sách</a></li>
                                 <li><a href="#"> Dự án đã làm</a></li>
-                                <li><a href="#"> Tin tức</a></li>
+                                <li><a href="/blog.html"> Blog</a></li>
                             </ul>
                         </div>
                     </div>

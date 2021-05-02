@@ -20,7 +20,9 @@ class BaseModel extends Model
     }
 
     public function getDataActive(){
-        return $this->active()->latest()->get();
+        return $this->active()
+            ->latest()
+            ->get();
     }
    
 }

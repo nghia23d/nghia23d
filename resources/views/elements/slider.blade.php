@@ -10,7 +10,7 @@
                                 Thiết kế By Nghia23d
                             </h1>
                             <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">
-                                Nghia23d sử dụng framwork Laravel mới nhất để xây dựng và lập trình ra website chuyên
+                                Nghia23d sử dụng framework Laravel mới nhất để xây dựng và lập trình ra website chuyên
                                 nghiệp, ổn định và có tính bảo mật cao.
                             </p>
                             <!-- Hero-btn -->

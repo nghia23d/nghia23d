@@ -40,9 +40,9 @@
                 </div>
 
                 <div class="blog-author mt-5">
-                    <div class="media align-items-center">
+                    <div class="media align-items-center d-flex">
                         <img width="120" src="https://avatars.githubusercontent.com/u/59638642?v=4" alt="Nghia23d">
-                        <div class="media-body ml-3">
+                        <div class="media-body pl-30">
                             <a href="#">
                                 <h4>Nghia23d</h4>
                             </a>

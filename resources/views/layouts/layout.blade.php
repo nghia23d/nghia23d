@@ -3,6 +3,7 @@
 
 @php
 $theme = config('nghia23d.theme');
+$version = '1.0';
 @endphp
 
 <head>
