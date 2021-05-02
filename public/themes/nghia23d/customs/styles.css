@@ -23,6 +23,10 @@ body a{
   padding: 185px 0;
 }
 
+.overflow-x-hidden{
+  overflow-x: hidden !important;
+}
+
 #mixedSlider {
     position: relative;
   }

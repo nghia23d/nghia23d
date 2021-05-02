@@ -14,17 +14,15 @@
                                 nghiệp, ổn định và có tính bảo mật cao.
                             </p>
                             <!-- Hero-btn -->
-                            <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s"
-                                data-duration="2000ms">
-                                <a href="/" class="btn">Gửi yêu cầu ngay</a>
+                            <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
+                                <a href="#" class="btn">Gửi yêu cầu ngay</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-4 d-none d-sm-block">
                         <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
                             <img class="img-fluid  heartbeat" style="width: 150%;"
-                                src="https://cdn2.iconfinder.com/data/icons/coding-7/100/mobile-developer-1-coding-developer-programmer-coder-software-laptop-mobile-phone-app-male-512.png"
-                                alt="" />
+                                src="/themes/nghia23d/assets/img/home/nghia23d.png" alt="Nghia23d" />
                         </div>
                     </div>
                 </div>
@@ -45,17 +43,15 @@
                                 <u>Và bảo hành tận tình xuyên suốt quá trình hoạt động của web.</u>
                             </p>
                             <!-- Hero-btn -->
-                            <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s"
-                                data-duration="2000ms">
-                                <a href="/" class="btn">Gửi yêu cầu ngay</a>
+                            <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
+                                <a href="#" class="btn">Gửi yêu cầu ngay</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-4 d-none d-sm-block">
                         <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
                             <img class="img-fluid  heartbeat" style="width: 150%;"
-                                src="https://cdn2.iconfinder.com/data/icons/coding-7/100/mobile-developer-1-coding-developer-programmer-coder-software-laptop-mobile-phone-app-male-512.png"
-                                alt="" />
+                                src="/themes/nghia23d/assets/img/home/nghia23d.png" alt="Nghia23d" />
                         </div>
                     </div>
                 </div>

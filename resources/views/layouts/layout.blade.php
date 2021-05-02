@@ -3,14 +3,14 @@
 
 @php
 $theme = config('nghia23d.theme');
-$version = '1.0';
+$version = '1.12';
 @endphp
 
 <head>
     @include('layouts.head')
 </head>
 
-<body style="overflow-x: hidden">
+<body class="overflow-x-hidden">
 
     <!-- ------Page------ -->
     @include('layouts.topbar')

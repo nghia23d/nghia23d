@@ -39,8 +39,9 @@ class Blog extends BaseModel
     public function getShortContentAttribute()
     {
         $content = preg_replace("/<img[^>]+\>/i", "(image)", $this->content);
+        // $content = str_replace(['<p>', '</p>'], '', $content);
 
-        return mb_substr($content, 0, 170, 'utf-8') . '...';
+        return preg_replace('/\s+?(\S+)?$/', '', substr($content, 0, 180)) . '...';
     }
 
     public function getBlogWithSlugTitle($slug_title)
