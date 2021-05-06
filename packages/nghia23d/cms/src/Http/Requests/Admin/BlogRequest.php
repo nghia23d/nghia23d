@@ -25,7 +25,7 @@ class BlogRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->id;
+        $id = $this->route($this->table);
 
         $condThumb  = 'bail|required|max:1024';
         $condTitle  = "bail|required|between:5,50|unique:$this->table,title";

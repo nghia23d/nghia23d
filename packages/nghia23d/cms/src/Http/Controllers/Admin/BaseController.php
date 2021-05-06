@@ -19,11 +19,6 @@ class BaseController extends Controller
         view()->share('pageName', $this->pageName);
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $data = $this->model->latest()->get();
@@ -31,53 +26,31 @@ class BaseController extends Controller
         return view($this->pathViewModule . 'index', compact('data'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function storeResource($data)
+    public function storeResource($resources)
     {
-        return $this->model->create($data);
+        return $this->model->create($resources);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
-        return view($this->pathViewModule . "report", ['data' =>  $this->model->findOrFail($id)]);
+        return view($this->pathViewModule . "report", [
+            'data' =>  $this->model->findOrFail($id)
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function updateResource($resources, $id)
     {
         $data = $this->model->findOrFail($id);
-        $data->update(array_filter($request->all(), 'strlen'));
-        //
-        return redirect()->route('cms.' . $this->module . '.index');
+
+        return $data->update(array_filter($resources, 'strlen'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $this->model->destroy($id);
 
-        return redirect()->route('cms.' . $this->module . '.index');
+        return redirect()
+            ->route('cms.' . $this->module . '.index')
+            ->with('success', "Xóa  $this->pageName  thành công");
     }
 }

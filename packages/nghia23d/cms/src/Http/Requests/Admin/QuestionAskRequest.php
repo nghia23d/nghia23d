@@ -25,7 +25,7 @@ class QuestionAskRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->id;
+        $id = $this->route($this->table);
 
         $condQuestion  = "bail|required|min:5|unique:$this->table,question";
 

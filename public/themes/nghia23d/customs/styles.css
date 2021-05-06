@@ -2,6 +2,12 @@
 body a{
     text-decoration: none !important;
 }
+
+.content {
+  color: #555 !important;
+  font-size: 17px;
+}
+
 .content img {
     max-width: 100%;
     height: auto;
@@ -29,6 +35,7 @@ body a{
 
 #mixedSlider {
     position: relative;
+    overflow-x: hidden;
   }
   #mixedSlider .MS-content {
     white-space: nowrap;

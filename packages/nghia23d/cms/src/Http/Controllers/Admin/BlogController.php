@@ -34,4 +34,13 @@ class BlogController extends BaseController
 
         return redirect()->route('cms.' . $this->module . '.index');
     }
+
+    public function update(MainRequest $request, $id)
+    {
+        $this->updateResource($request->all(), $id);
+
+        return redirect()
+            ->route('cms.' . $this->module . '.index')
+            ->with('success', "Cập nhật $this->pageName thành công");
+    }
 }

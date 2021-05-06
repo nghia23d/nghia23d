@@ -51,7 +51,7 @@
                     <div class="col-4 d-none d-sm-block">
                         <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
                             <img class="img-fluid  heartbeat" style="width: 150%;"
-                                src="/themes/nghia23d/assets/img/home/nghia23d.png" alt="Nghia23d" />
+                                src="/themes/nghia23d/assets/img/home/nghia23d-2.png" alt="Nghia23d-2" />
                         </div>
                     </div>
                 </div>

@@ -27,6 +27,9 @@ $theme = config('cms.theme');
     <!-- All Scripts -->
     @include('cms::layouts.script')
 
+    <!-- Toast -->
+    @component('cms::components.notification') @endcomponent
+
     @yield('js')
 
 </body>
