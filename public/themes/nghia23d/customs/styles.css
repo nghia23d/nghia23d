@@ -1,5 +1,5 @@
 
-body a{
+a{
     text-decoration: none !important;
 }
 
@@ -94,7 +94,7 @@ body a{
     /* margin: 2px 10px 0 5px; */
     /* text-indent: 15px; */
   }
-  #mixedSlider .MS-content .item a {
+  #mixedSlider .MS-content .item a.read-more {
     float: right;
     margin: 10px 20px 0 0;
     font-style: italic;
@@ -104,7 +104,7 @@ body a{
     font-size: 18px;
     font-weight: 500;
   }
-  #mixedSlider .MS-content .item a:hover {
+  #mixedSlider .MS-content .item a.read-more:hover {
     text-shadow: 0 0 1px grey;
   }
   #mixedSlider .MS-controls button {
@@ -179,7 +179,7 @@ body a{
   #basicSlider .MS-content .item { width: 50%; }
   }
   
-  #basicSlider .MS-content .item a {
+  #basicSlider .MS-content .item a.read-more {
     line-height: 50px;
     vertical-align: middle;
   }

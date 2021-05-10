@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion accordion-flush shadow-sm" id="accordionFlushExample">
                     @foreach ($data as $key => $value)
                     <div class="accordion-item">
                         <!-- Question -->
