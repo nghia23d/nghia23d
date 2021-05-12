@@ -37,12 +37,4 @@
         </div>
     </div>
 </section>
-@section('js')
-<script>
-    $('#mixedSlider').multislider({
-        duration: 750,
-        interval: 3000
-    });
-</script>
-@endsection
 @endif

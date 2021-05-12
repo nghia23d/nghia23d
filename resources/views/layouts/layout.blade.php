@@ -3,7 +3,8 @@
 
 @php
 $theme = config('nghia23d.theme');
-$version = '1.17';
+$versionCss = '1.18';
+$versionJs = '1.0';
 @endphp
 
 <head>
@@ -25,7 +26,7 @@ $version = '1.17';
 
     <!-- Elements -->
     @include('elements.preload')
-    {{-- @include('elements.main_modal') --}}
+    @include('elements.main_modal')
 
 
     <!-- All Scripts -->

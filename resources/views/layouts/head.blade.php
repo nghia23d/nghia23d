@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/themes/{{ $theme }}/assets/css/themify-icons.css" />
 <link rel="stylesheet" href="/themes/{{ $theme }}/assets/css/slick.css" />
 <link rel="stylesheet" href="/themes/{{ $theme }}/assets/css/nice-select.css" />
-<link rel="stylesheet" href="/themes/{{ $theme }}/assets/scss/style.css?v={{$version}}" />
+<link rel="stylesheet" href="/themes/{{ $theme }}/assets/scss/style.css?v={{$versionCss}}" />
 
 <!-- Custom CSS -->
-<link rel="stylesheet" href="/themes/{{ $theme }}/customs/styles.css?v={{$version}}" />
+<link rel="stylesheet" href="/themes/{{ $theme }}/customs/styles.css?v={{$versionCss}}" />
