@@ -21,6 +21,12 @@ class Blog extends BaseModel
         'user_id'
     ];
 
+    protected $searchable = [
+        'title',
+        // 'content',
+        'tag',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

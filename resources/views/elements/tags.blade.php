@@ -4,7 +4,7 @@
         <ul class="list">
             @foreach ($tags as $tag)
                 <li>
-                    <a href="#">{{ $tag }}</a>
+                    <a href="/search?q={{ $tag }}">{{ $tag }}</a>
                 </li>
             @endforeach
         </ul>

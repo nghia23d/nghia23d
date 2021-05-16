@@ -20,8 +20,8 @@
                     </a>
                 </div>
 
-                <img class="img-fluid my-3"
-                    src="https://img.freepik.com/free-vector/horizontal-sale-banner-template_23-2148917183.jpg?size=626&ext=jpg"
+                <img class="img-fluid my-4 pe-none"
+                    src="https://hellosubscription.com/wp-content/uploads/2018/07/13080511/lovegoodly.gif?quality=100"
                     alt="">
             </div>
             <!-- <div class="modal-footer">
@@ -31,15 +31,16 @@
         </div>
     </div>
 </div>
-@section('js')
+
+<!-- Setup modal -->
 <script>
-    if(localStorage.POPUP_SALE_OFF != "1"){
-    $(window).on('load', function () {
-        setTimeout(() => {
-            $('#myModal').modal('show');
-        }, 1000);
-    });
-    localStorage.POPUP_SALE_OFF = "1";
-}
+    if (sessionStorage.POPUP_SALE_OFF != "test") {
+        $(window).on('load', function() {
+            setTimeout(() => {
+                $('#myModal').modal('show');
+            }, 1000);
+        });
+        sessionStorage.POPUP_SALE_OFF = "test";
+    }
+
 </script>
-@endsection

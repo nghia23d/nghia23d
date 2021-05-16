@@ -3,8 +3,8 @@
 
 @php
 $theme = config('nghia23d.theme');
-$versionCss = '1.18';
-$versionJs = '1.0';
+$versionCss = '1.19';
+$versionJs = '1.1';
 @endphp
 
 <head>
@@ -12,6 +12,7 @@ $versionJs = '1.0';
 </head>
 
 <body class="overflow-x-hidden">
+
 
     <!-- Topbar -->
     @include('layouts.topbar')
@@ -26,11 +27,15 @@ $versionJs = '1.0';
 
     <!-- Elements -->
     @include('elements.preload')
-    @include('elements.main_modal')
+
 
 
     <!-- All Scripts -->
     @include('layouts.scripts')
+
+    <!-- Modal -->
+    @include('elements.main_modal')
+
 
     @yield('js')
 </body>

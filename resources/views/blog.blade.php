@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Bài viết')
+@section('title', isset($q) ? "Tìm kiếm: $q" : 'Bài viết'))
 
 @section('content')
     <div class="slider-area mb-5">
@@ -20,6 +20,16 @@
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
+
+                    <!-- Nodata -->
+                    @if (!$data->total())
+                        <div class="text-cemter">
+                            <h3>Không có dữ liệu nào cho từ khóa: <span class="text-secondary">{{ $q }}</span>
+                            </h3>
+                        </div>
+                    @endif
+
+                    <!-- Blog -->
                     @foreach ($data as $value)
                         <article class="blog_item">
                             <div class="blog_item_img">
@@ -38,52 +48,27 @@
                                     {!! $value->short_content !!}
                                 </div>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> {{--  {{ $value->user->name }}  --}} Nghia23d</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i> {{-- {{ $value->user->name }} --}} Admin</a></li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-tags"></i> Tags: </a>
+                                        @foreach ($value->tag_array as $tag)
+                                            <a href="/search?q={{ $tag }}" class="px-1">{{ $tag }}</a>
+                                        @endforeach
+                                    </li>
                                     {{-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> --}}
                                 </ul>
                             </div>
                         </article>
                     @endforeach
 
-                    {{-- <nav class="blog-pagination justify-content-center d-flex">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Previous">
-                                    <i class="ti-angle-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#" class="page-link">1</a>
-                            </li>
-                            <li class="page-item active">
-                                <a href="#" class="page-link">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Next">
-                                    <i class="ti-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav> --}}
+                    <!-- Pagination -->
+                    {{ $data->withQueryString()->links('pagination.default') }}
+
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="blog_right_sidebar">
-                    <aside class="single_sidebar_widget search_widget">
-                        <form action="#">
-                            <div class="form-group">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder='Search Keyword'
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
-                                    <div class="input-group-append">
-                                        <button class="btns" type="button"><i class="ti-search"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                type="submit">Search</button>
-                        </form>
-                    </aside>
+                    @include('elements.search', ['keyword' => isset($q) ? $q : ''])
 
                     {{-- <aside class="single_sidebar_widget post_category_widget">
                         <h4 class="widget_title">Category</h4>

@@ -8,6 +8,7 @@ Route::group(
         'middleware' => ['web', 'auth']
     ],
     function () {
+        
         // Module
         Route::resources([
             'blog'         => BlogController::class,
@@ -23,13 +24,15 @@ Route::group(
     ],
     function () {
 
+        //Home
         Route::get('/', 'HomeController@pageHome')->name('home');
-
         Route::get('/blog.html', 'HomeController@pageBlog');
-
         Route::get('/{slug_title}.html', 'HomeController@getDetailBlog')
-            ->where('slug_title', '[0-9a-zA-Z_-]+')
-            ->where('id', '[0-9]+');
+            ->where([
+                'slug_title', '[0-9a-zA-Z_-]+',
+                'id', '[0-9]+'
+            ]);
+        Route::get('/search', 'HomeController@searchBlog')->name('search');
 
 
         // File Manager
