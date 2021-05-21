@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', isset($q) ? "Tìm kiếm: $q" : 'Bài viết'))
+@section('title', isset($q) ? "Tìm kiếm: $q" : 'Bài viết')
 
 @section('content')
     <div class="slider-area mb-5">
