@@ -2853,6 +2853,30 @@ input:focus {
   background-position: center center !important;
 }
 
+.custom-scrollbar {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: white;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #cfcfcf;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: #ff2020;
+}
+
 /*-------------   Color variabel  --------------*/
 .white-bg {
   background: #ffffff;

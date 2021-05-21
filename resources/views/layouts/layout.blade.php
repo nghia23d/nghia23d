@@ -3,7 +3,7 @@
 
 @php
 $theme = config('nghia23d.theme');
-$versionCss = '1.19';
+$versionCss = '1.2';
 $versionJs = '1.1';
 @endphp
 
@@ -11,7 +11,7 @@ $versionJs = '1.1';
     @include('layouts.head')
 </head>
 
-<body class="overflow-x-hidden">
+<body class="custom-scrollbar">
 
 
     <!-- Topbar -->

@@ -28,10 +28,6 @@ a {
     padding: 185px 0;
 }
 
-.overflow-x-hidden {
-    overflow-x: hidden !important;
-}
-
 .modal-open {
     overflow: hidden !important;
 }

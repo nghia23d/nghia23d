@@ -1189,3 +1189,26 @@ input:focus::-moz-placeholder {
 	background-repeat: no-repeat !important;
 	background-position: center center !important;
 }
+
+.custom-scrollbar {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #cfcfcf;
+		&:active{
+			background-color: $theme-color;
+		}
+    }
+}
