@@ -157,8 +157,8 @@ input:focus::-moz-placeholder {
 
 // Section Padding
 	.section-padding{
-		padding-top: 120px;
-		padding-bottom: 120px;
+		padding-top: 85px;
+		padding-bottom: 85px;
 	}
 	.separator {
 		border-top: 1px solid #f2f2f2
@@ -264,7 +264,7 @@ input:focus::-moz-placeholder {
 		transition-timing-function: ease;
 		transform-origin: 0 0;
 		transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
-		// 
+		//
 		transform: scaleX(0);
 		border-radius: 0px;
 	}
@@ -284,7 +284,7 @@ input:focus::-moz-placeholder {
 }
 	.btn.focus, .btn:focus {
 		outline: 0;
-		box-shadow:none; 
+		box-shadow:none;
 	}
 .hero-btn{
 	padding: 25px 29px;
@@ -354,7 +354,7 @@ input:focus::-moz-placeholder {
 		transition-timing-function: ease;
 		transform-origin: 0 0;
 		transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
-		// 
+		//
 		transform: scaleY(0);
 	}
 }
@@ -397,7 +397,7 @@ input:focus::-moz-placeholder {
 		transition-timing-function: ease;
 		transform-origin: 0 0;
 		transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
-		// 
+		//
 		transform: scaleX(0);
 	}
 }
@@ -405,7 +405,7 @@ input:focus::-moz-placeholder {
 	transform: scaleY(1);
 	order: 2px solid transparent;
 	color:red;
-	
+
 }
 
 
@@ -538,7 +538,7 @@ input:focus::-moz-placeholder {
 	100% {
 	  -webkit-transform: translateY(-10px);
 	  transform: translateY(-10px); } }
-	  
+
 /* heartbeat */
 .heartbeat {
 	animation: heartbeat 1s infinite alternate;
@@ -690,15 +690,15 @@ input:focus::-moz-placeholder {
 /*-- Section Padding -- */
 
 	.section-padding2{
-		padding-top: 200px;
-		padding-bottom: 200px;
+		padding-top: 185px;
+		padding-bottom: 185px;
 		@media #{$laptop}{
-			padding-top: 200px;
-			padding-bottom: 200px;
+			padding-top: 185px;
+			padding-bottom: 185px;
 		}
 		@media #{$lg}{
-			padding-top: 200px;
-			padding-bottom: 200px;
+			padding-top: 185px;
+			padding-bottom: 185px;
 		}
 		@media #{$md}{
 			padding-top: 100px;
@@ -801,11 +801,11 @@ input:focus::-moz-placeholder {
 			padding-bottom: 28px;
 		}
 	}
-	
-	
+
+
 	.section-paddingt2{
 		padding-bottom: 170px;
-		@media #{$laptop}{																																																																																						
+		@media #{$laptop}{
 			padding-bottom: 170px;
 		}
 		@media #{$lg}{
@@ -821,7 +821,7 @@ input:focus::-moz-placeholder {
 			padding-bottom: 28px;
 		}
 	}
-	
+
 	.section-padd-top30{
 		padding-top: 170px;
 		padding-bottom: 200px;
@@ -871,7 +871,7 @@ input:focus::-moz-placeholder {
 			padding-bottom: 5px;
 		}
 	}
-	
+
 	.footer-padding{
 		padding-top: 150px;
 		padding-bottom: 120px;

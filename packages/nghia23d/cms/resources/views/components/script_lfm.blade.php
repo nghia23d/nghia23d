@@ -45,5 +45,5 @@
 </script>
 <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script>
-    $('#lfm').filemanager('image');
+    $('.lfm').filemanager('image');
 </script>

@@ -8,12 +8,17 @@ Route::group(
         'middleware' => ['web', 'auth']
     ],
     function () {
-        
-        // Module
-        Route::resources([
-            'blog'         => BlogController::class,
-            'question_ask' => QuestionAskController::class,
-        ]);
+        // Slider
+        Route::resource('slider', 'SliderController');
+        Route::get('slider/{id}/change-status', 'SliderController@changeStatus')->where('id', '[0-9]+');
+
+        // Blog
+        Route::resource('blog', 'BlogController');
+        Route::get('blog/{id}/change-status', 'BlogController@changeStatus')->where('id', '[0-9]+');
+
+        // QuestionAsk
+        Route::resource('question_ask', 'QuestionAskController');
+        Route::get('question_ask/{id}/change-status', 'QuestionAskController@changeStatus')->where('id', '[0-9]+');
     }
 );
 
@@ -23,6 +28,8 @@ Route::group(
         'namespace' => 'nghia23d\cms\Http\Controllers\User',
     ],
     function () {
+        //View
+        Route::view('/lien-he.html', 'contact')->name('contact');
 
         //Home
         Route::get('/', 'HomeController@pageHome')->name('home');

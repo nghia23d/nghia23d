@@ -45,7 +45,6 @@ class Blog extends BaseModel
     public function getShortContentAttribute()
     {
         $content = preg_replace("/<img[^>]+\>/i", "(image)", $this->content);
-        // $content = str_replace(['<p>', '</p>'], '', $content);
 
         return preg_replace('/\s+?(\S+)?$/', '', substr($content, 0, 180)) . '...';
     }

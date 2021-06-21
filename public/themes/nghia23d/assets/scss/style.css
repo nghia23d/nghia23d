@@ -336,8 +336,8 @@ input:focus::-moz-placeholder {
 }
 
 .section-padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 85px;
+  padding-bottom: 85px;
 }
 
 .separator {
@@ -2150,21 +2150,21 @@ input:focus::-moz-placeholder {
 
 /*-- Section Padding -- */
 .section-padding2 {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 185px;
+  padding-bottom: 185px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .section-padding2 {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 185px;
+    padding-bottom: 185px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-padding2 {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 185px;
+    padding-bottom: 185px;
   }
 }
 
@@ -6110,6 +6110,11 @@ input:focus {
 
 .form-contact label {
   font-size: 14px;
+}
+
+.form-contact label.error {
+  color: #ff2020;
+  text-transform: capitalize;
 }
 
 .form-contact .form-group {

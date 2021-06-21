@@ -8,17 +8,18 @@
                         <div class="single-footer-caption mb-30">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <a href="/"><img src="/themes/{{$theme}}/assets/img/logo/nghia23d.png" alt="" /></a>
+                                <a href="/"><img src="/themes/{{ $theme }}/assets/img/logo/nghia23d.png"
+                                        alt="" /></a>
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
                                     <p>
                                         - Tôi là <span class="text-danger">Nghia23d</span> , công việc yêu thích của
-                                        bản thân là phát triển web, và tìm hiểu
-                                        về công nghệ. <br>
-                                        - Trong tương lai tôi sẽ trở thành một Developer chuyên nghiệp để tạo ra các
-                                        sản phẩm chất lượng mang đến sự hài lòng cho khách hàng và doanh nghiệp.
-
+                                        bản thân là phát triển web, và tìm hiểu về công nghệ. <br>
+                                        - Trong thời gian hiện và sau này <span class="text-danger">Nghia23d</span> cam
+                                        kết luôn luôn làm việc chuyên nghiệp và tối ưu để tạo ra các
+                                        sản phẩm chất lượng và giá ưu đãi nhất để mang đến sự hài lòng cho khách hàng và
+                                        doanh nghiệp.
                                     </p>
                                 </div>
                             </div>
@@ -78,11 +79,11 @@
                             ©
                             <script>
                                 document.write(new Date().getFullYear());
-
                             </script>
                             Bản quyền thuộc về
                             <i class="fa fa-heart" aria-hidden="true"></i>
-                            <a class="text-dark font-weight-normal" href="nghia23d.com" target="_blank">Nghia23d</a>
+                            <a class="text-dark font-weight-normal" href="nghia23d.com" target="_blank">
+                                <b>Nghia23d</b></a>
                         </p>
                     </div>
                 </div>

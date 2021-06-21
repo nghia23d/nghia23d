@@ -22,6 +22,7 @@
                                 </li>
                                 <li><a href="/blog.html">Blog</a></li>
                                 <li><a href="/ve-toi.html">Về tôi</a></li>
+                                 <li><a href="/lien-he.html">Liên hệ</a></li>
                             </ul>
                         </nav>
                     </div>

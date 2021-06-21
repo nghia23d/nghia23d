@@ -20,13 +20,6 @@ a {
     display: none;
 }
 
-.section-padding {
-    padding: 85px 0;
-}
-
-.section-padding2 {
-    padding: 185px 0;
-}
 
 .modal-open {
     overflow: hidden !important;

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="section-tittle mb-70">
-                    <h2>Sử công nghệ thiết kế Web hiện đại</h2>
+                    <h2>Sử dụng công nghệ thiết kế Web hiện đại</h2>
                 </div>
             </div>
         </div>

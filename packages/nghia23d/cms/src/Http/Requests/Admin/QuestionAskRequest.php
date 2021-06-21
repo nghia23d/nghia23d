@@ -45,7 +45,7 @@ class QuestionAskRequest extends FormRequest
             'question.unique'    => 'Câu hỏi bài viết này đã tồn tại. Hãy đặt tiêu đề khác',
             'question.min'       => 'Câu hỏi không được ít hơn :min  kí tự',
             'ask.required'       => 'Câu trả lời không được để trống',
-            'ask.min'        => 'Câu trả lời không được ít hơn :min  kí tự',
+            'ask.min'            => 'Câu trả lời không được ít hơn :min  kí tự',
         ];
     }
 }

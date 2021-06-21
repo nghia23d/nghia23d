@@ -72,11 +72,14 @@
                                         <td> {{ $value->ask }}</td>
 
                                         <td class="text-center">
-                                            @if ($value->status)
-                                            <span class="badge badge-success">Kích hoạt</span>
-                                            @else
-                                            <span class="badge badge-warning">Chưa kích hoạt</span>
-                                            @endif
+                                            @component('cms::components.change_status')
+                                            @slot('id')
+                                            {{$value->id}}
+                                            @endslot
+                                            @slot('status')
+                                            {{$value->status}}
+                                            @endslot
+                                            @endcomponent
                                         </td>
 
                                         <td class="text-right">

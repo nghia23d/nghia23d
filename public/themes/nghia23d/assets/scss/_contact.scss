@@ -52,6 +52,10 @@
 
   label{
     font-size: 14px;
+    &.error{
+       color: $theme-color;
+       text-transform: capitalize;
+    }
   }
 
   .form-group{
@@ -145,7 +149,7 @@
     margin-top: 0;
     &:hover{
       background-color: $theme-color2;
-      
+
     }
   }
 }

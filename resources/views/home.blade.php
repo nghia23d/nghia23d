@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Slider -->
-    @include('elements.slider')
+    @include('elements.slider', ['data' => $data->slider])
 
     <!-- Featured -->
     @include('elements.block_feature')

@@ -45,6 +45,22 @@ class BaseController extends Controller
         return $data->update(array_filter($resources, 'strlen'));
     }
 
+    public function changeStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:'.$this->model::STATUS_INACTIVE.','.$this->model::STATUS_ACTIVE,
+        ]);
+
+        $data = $this->model->findOrFail($id);
+        $data->status = $request->status;
+        $data->save();
+
+        return response()->json([
+            'status' => 200,
+            'item'   => $data
+        ]);
+    }
+
     public function destroy($id)
     {
         $this->model->destroy($id);

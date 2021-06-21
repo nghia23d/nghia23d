@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 //
 use nghia23d\cms\Models\Blog;
 use nghia23d\cms\Models\QuestionAsk;
+use nghia23d\cms\Models\Slider;
 
 class HomeController
 {
@@ -18,6 +19,7 @@ class HomeController
     public function pageHome()
     {
         $data =  (object) [
+          'slider'         => (new Slider())->getDataActive(3),
           'questionAsk'    => (new QuestionAsk())->getDataActive(),
           'blogHightLight' => $this->blogModel->getBlogHighLight(10),
         ];
@@ -27,7 +29,7 @@ class HomeController
 
     public function pageBlog()
     {
-        $data = $this->blogModel->getDataActive();
+        $data = $this->blogModel->getDataActivePagination();
 
         return view('blog', compact('data'));
     }
@@ -37,7 +39,7 @@ class HomeController
         $request->validate([
             'q' => 'required|string|max:20',
         ]);
-        
+
         return view('blog', [
             'q'    => $request->q,
             'data' => $this->blogModel->search($request->q)
