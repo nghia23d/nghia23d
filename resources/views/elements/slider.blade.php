@@ -8,13 +8,12 @@
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    @if (!$index)
+                                    @if ($index)
                                         <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">
                                             {{ $value->title }}
                                         </h1>
                                     @else
-                                        <h2 style="font-size: 96px;font-weight: 700" data-animation="fadeInLeft"
-                                            data-delay=".4s" data-duration="2000ms">
+                                        <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">
                                             {{ $value->title }}
                                         </h2>
                                     @endif

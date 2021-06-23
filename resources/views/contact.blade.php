@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div class="form-group mt-3">
-                        <a href="https://www.facebook.com/nghia23d" type="button"
+                        <a href="https://www.facebook.com/nghia23d"
                             class="button button-contactForm boxed-btn">Gửi</a>
                         {{-- <button type="submit" class="button button-contactForm boxed-btn">Gửi</button> --}}
                     </div>

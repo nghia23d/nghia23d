@@ -19,6 +19,10 @@ Route::group(
         // QuestionAsk
         Route::resource('question_ask', 'QuestionAskController');
         Route::get('question_ask/{id}/change-status', 'QuestionAskController@changeStatus')->where('id', '[0-9]+');
+
+         // Review
+         Route::resource('review', 'ReviewController');
+         Route::get('review/{id}/change-status', 'ReviewController@changeStatus')->where('id', '[0-9]+');
     }
 );
 

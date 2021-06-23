@@ -1,7 +1,7 @@
 <section class="section-padding">
     <div class="watch-area ">
         <div class="container">
-            <div class="row align-items-center justify-content-between pb-150">
+            <div class="row align-items-center justify-content-between pb-100">
                 <div class="col-lg-5 col-md-6">
                     <div class="watch-details mb-40">
                         <h2>Giao diện thân thiện
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center justify-content-between pb-150">
+            <div class="row align-items-center justify-content-between pb-100">
                 <div class="col-lg-6 col-md-6 col-sm-10">
                     <div class="choice-watch-img mb-40">
                         <img src="/themes/nghia23d/assets/img/home/uiuix2.png" alt="giao-dien-than-thien-2" />

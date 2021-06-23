@@ -4,14 +4,14 @@ namespace nghia23d\cms\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SliderRequest extends FormRequest
+class ReviewRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    private $table = 'slider';
+    private $table = 'review';
 
     public function authorize()
     {
@@ -27,31 +27,27 @@ class SliderRequest extends FormRequest
     {
         $id = $this->route($this->table);
 
-        $condImage  = 'bail|required|max:1024';
-        $condTitle  = "bail|required|between:5,70|unique:$this->table,title";
+        $condAvatar  = 'bail|required|max:1024';
 
         //rules for edit
         if (!empty($id)) {
-            $condImage   = 'bail|max:1024';
-            $condTitle  .= ",$id";
+            $condAvatar   = 'bail|max:1024';
         }
 
         return [
-            'title'            => $condTitle,
+            'user_name'        => 'bail|required',
+            'position'         => 'bail|required',
+            'stars'            => 'bail|integer',
             'description'      => 'bail|required',
-            'link'             => 'bail',
             'status'           => 'bail|in:0,1',
-            'image'            => $condImage,
+            'avatar'           => $condAvatar,
         ];
     }
     public function messages()
     {
         return [
-            'title.required'            => 'Tiêu đề không được để trống',
-            'title.unique'              => 'Tiêu đề bài viết này đã tồn tại. Hãy đặt tiêu đề khác',
-            'title.between'             => 'Tiêu đề không được ít hơn :min  kí tực và nhỏ hơn :max',
+            'user_name.required'        => 'Avatar không được để trống',
             'description.required'      => 'Description không được để trống',
-            // 'link.required'             => 'Link slider không được để trống',
             'status.in'                 => 'Vui lòng chọn kích hoạt hoặc không kích hoạt',
         ];
     }

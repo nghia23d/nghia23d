@@ -59,7 +59,7 @@
             padding-left: 22px;
         }
 
-         h1{
+         h1,h2{
             text-transform: normal;
             font-size: 96px;
             font-weight: 700;
@@ -172,34 +172,34 @@
     &:hover button.slick-prev {
         left: 100px;
         @media #{$laptop}{
-            left: 20px; 
+            left: 20px;
         }
         @media #{$lg}{
             left: auto;
             right: 10px;
         }
-        
+
     }
-    
+
     &:hover button.slick-next {
         right: 100px;
         @media #{$laptop}{
-            right: 20px; 
+            right: 20px;
         }
     }
-    
+
     &:hover button {
         opacity: 1;
         visibility: visible;
     }
-    
+
     & button:hover {
         background: #002d5b;
     }
-    
+
     .secondary-img {
         position: absolute;
         opacity: 0;
     }
-    
+
 }

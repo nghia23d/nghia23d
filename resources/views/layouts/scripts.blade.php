@@ -40,7 +40,7 @@
 {{-- Libary --}}
 
 <script
-    src="https://www.jqueryscript.net/demo/Responsive-Multi-slide-Carousel-Plugin-jQuery-Multislider/js/multislider.js">
+    src="/themes/{{ $theme }}/libary/multi-slide-carousel.js">
 </script>
 
 <script src="./themes/{{ $theme }}/customs/js.js?v={{$versionJs}}"></script>

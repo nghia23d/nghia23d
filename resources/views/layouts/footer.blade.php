@@ -16,7 +16,7 @@
                                     <p>
                                         - Tôi là <span class="text-danger">Nghia23d</span> , công việc yêu thích của
                                         bản thân là phát triển web, và tìm hiểu về công nghệ. <br>
-                                        - Trong thời gian hiện và sau này <span class="text-danger">Nghia23d</span> cam
+                                        - Trong thời gian hiện tại và sau này <span class="text-danger">Nghia23d</span> cam
                                         kết luôn luôn làm việc chuyên nghiệp và tối ưu để tạo ra các
                                         sản phẩm chất lượng và giá ưu đãi nhất để mang đến sự hài lòng cho khách hàng và
                                         doanh nghiệp.
@@ -35,6 +35,7 @@
                                 <li><a href="#"> Chính sách</a></li>
                                 <li><a href="#"> Dự án đã làm</a></li>
                                 <li><a href="/blog.html"> Blog</a></li>
+                                <li><a href="/lien-he.html"> Liên hệ</a></li>
                             </ul>
                         </div>
                     </div>

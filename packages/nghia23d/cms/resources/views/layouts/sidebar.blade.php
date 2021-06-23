@@ -43,6 +43,15 @@
                   </p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a a href="{{ route('cms.review.index') }}"
+                  class="nav-link {{ Request::is('cms/review*') ? 'active' : '' }}">
+                  <i class="nav-icon far fa-image"></i>
+                  <p>
+                    Quản lý đánh giá người dùng
+                  </p>
+                </a>
+              </li>
 
               <li class="nav-item">
                 <a a href="{{ route('cms.question_ask.index') }}"

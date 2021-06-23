@@ -33,14 +33,14 @@
                         color:$theme-color;
                         padding-left: 5px;
                     }
-                   
+
                 }
             }
         }
     }
 }
 
-//copy Right 
+//copy Right
 
 
     .footer-copy-right{
@@ -48,11 +48,11 @@
         @media #{$md}{
             padding-top: 0px;
             float: left;
-        }      
+        }
         @media #{$sm}{
             padding-top: 0px;
             float: left;
-        }    
+        }
         @media #{$xs}{
             padding-top: 0px;
             float: left;
@@ -80,8 +80,8 @@
             padding-right: 0;
         }
        & i{
-        color: #222222;
-        font-size: 14px;
+        color: #666;
+        font-size: 16px;
         padding: 5px 10px;
         // Effect
         @include transition(.4s);
@@ -99,7 +99,7 @@
             -ms-transform: rotateY(180deg);
             -o-transform: rotateY(180deg);
         }
-      
+
        }
     }
 }

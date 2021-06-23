@@ -3351,7 +3351,7 @@ input:focus {
   }
 }
 
-.slider-area .hero__caption h1 {
+.slider-area .hero__caption h1, .slider-area .hero__caption h2 {
   text-transform: normal;
   font-size: 96px;
   font-weight: 700;
@@ -3360,21 +3360,21 @@ input:focus {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .slider-area .hero__caption h1 {
+  .slider-area .hero__caption h1, .slider-area .hero__caption h2 {
     font-size: 60px;
     line-height: 1.2;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slider-area .hero__caption h1 {
+  .slider-area .hero__caption h1, .slider-area .hero__caption h2 {
     font-size: 50px;
     line-height: 1.2;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .slider-area .hero__caption h1 {
+  .slider-area .hero__caption h1, .slider-area .hero__caption h2 {
     font-size: 35px;
     line-height: 1.2;
     margin-bottom: 26px;
@@ -3382,7 +3382,7 @@ input:focus {
 }
 
 @media (max-width: 575px) {
-  .slider-area .hero__caption h1 {
+  .slider-area .hero__caption h1, .slider-area .hero__caption h2 {
     font-size: 33px;
     line-height: 1.2;
     margin-bottom: 26px;
@@ -4693,8 +4693,8 @@ input:focus {
 }
 
 .footer-social a i {
-  color: #222222;
-  font-size: 14px;
+  color: #666;
+  font-size: 16px;
   padding: 5px 10px;
   -webkit-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
